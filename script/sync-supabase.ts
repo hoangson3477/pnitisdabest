@@ -3,12 +3,13 @@ import * as fs from "fs";
 
 // Mock server-only so it doesn't throw outside Next.js server runtime
 import Module from "module";
-// @ts-expect-error internal
-const originalRequire = Module.prototype.require;
-// @ts-expect-error internal
-Module.prototype.require = function (id: string) {
+const modProto = Module.prototype as unknown as {
+  require: (id: string) => unknown;
+};
+const originalRequire = modProto.require;
+modProto.require = function (id: string) {
   if (id === "server-only") return {};
-  return originalRequire.apply(this, arguments);
+  return originalRequire.call(this, id);
 };
 
 async function run() {
@@ -93,15 +94,23 @@ async function run() {
     .limit(1)
     .single();
 
+  if (!latest) {
+    throw new Error("No latest version found in database");
+  }
+
+  const clubData = (latest.data as { club: typeof club; stages: typeof stages; questions: typeof questions }).club;
+  const stagesData = (latest.data as { club: typeof club; stages: typeof stages; questions: typeof questions }).stages;
+  const questionsData = (latest.data as { club: typeof club; stages: typeof stages; questions: typeof questions }).questions;
+
   console.log("Verified latest version in Supabase:");
   console.log("- ID:", latest.id);
-  console.log("- Club Name:", latest.data.club.name);
-  console.log("- Monogram:", latest.data.club.monogram);
-  console.log("- Tagline:", latest.data.club.tagline);
-  console.log("- Cover Image:", latest.data.club.coverImage);
-  console.log("- Stats:", JSON.stringify(latest.data.club.stats));
-  console.log("- Stages Count:", latest.data.stages.length);
-  console.log("- Questions Count:", latest.data.questions.length);
+  console.log("- Club Name:", clubData.name);
+  console.log("- Monogram:", clubData.monogram);
+  console.log("- Tagline:", clubData.tagline);
+  console.log("- Cover Image:", clubData.coverImage);
+  console.log("- Stats:", JSON.stringify(clubData.stats));
+  console.log("- Stages Count:", stagesData.length);
+  console.log("- Questions Count:", questionsData.length);
 }
 
 run().catch(console.error);
