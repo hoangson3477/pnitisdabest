@@ -39,7 +39,7 @@ export const questions: Question[] = [
     [
       tf("Milu vừa vào học lớp 10 tại trường THPT Phú Nhuận.", true),
       mc(["Lớp 10", "Lớp 11", "Lớp 12", "Đại học"], 0),
-      sa(["lop 10", "lớp 10", "10"], "Ví dụ: lớp 10"),
+      sa(["lop 10", "lớp 10", "10"], "Nhập tên khối lớp (ví dụ: lớp 11 hoặc 12)"),
     ],
   ),
 
@@ -51,7 +51,22 @@ export const questions: Question[] = [
     [
       tf("PNIT được thành lập vào năm 2015 và đã hoạt động được 11 năm tính đến tháng 11/2026.", true),
       mc(["Năm 2015 (11 năm hoạt động)", "Năm 2018 (8 năm hoạt động)", "Năm 2020 (6 năm hoạt động)", "Năm 2012 (14 năm hoạt động)"], 0),
-      sa(["2015", "nam 2015", "năm 2015", "11 nam", "11 năm"], "Ví dụ: 2015 (11 năm)"),
+      sa(
+        [
+          "2015",
+          "nam 2015",
+          "năm 2015",
+          "11 nam",
+          "11 năm",
+          "2015 11 nam",
+          "2015 11 năm",
+        ],
+        "Nhập năm thành lập (ví dụ: 2018)",
+        [
+          { any: ["2015"], points: 10 },
+          { any: ["11 nam", "11 năm", "11"], points: 10 },
+        ],
+      ),
     ],
   ),
 
@@ -63,7 +78,7 @@ export const questions: Question[] = [
     [
       tf("Tên tiếng Anh chính thức của CLB là Phu Nhuan's Information Technology Club.", true),
       mc(["Phu Nhuan's Information Technology Club", "Phu Nhuan Information Technology Association", "Phu Nhuan Tech School Society", "Phu Nhuan Computer Network Club"], 0),
-      sa(["phu nhuans information technology club", "phu nhuan's information technology club", "câu lạc bộ tin học", "cau lac bo tin hoc", "clb tin hoc", "clb tin học"], "Ví dụ: Phu Nhuan's Information Technology Club"),
+      sa(["phu nhuans information technology club", "phu nhuan's information technology club", "câu lạc bộ tin học", "cau lac bo tin hoc", "clb tin hoc", "clb tin học"], "Nhập tên tiếng Anh đầy đủ (ví dụ: ABC's Technology Club)"),
     ],
   ),
 
@@ -75,7 +90,7 @@ export const questions: Question[] = [
     [
       tf("Thầy Hà Thanh Liêm là giáo viên phụ trách CLB với slogan 'BỨT PHÁ TỎA SÁNG, KÍCH HOẠT KỶ NGUYÊN MỚI!'.", true),
       mc(["Thầy Hà Thanh Liêm · 'BỨT PHÁ TỎA SÁNG, KÍCH HOẠT KỶ NGUYÊN MỚI!'", "Thầy Nguyễn Văn Nam · 'KẾT NỐI ĐAM MÊ, VƯƠN TẦM CÔNG NGHỆ'", "Cô Trần Thị Mai · 'SÁNG TẠO KHÔNG NGỪNG NGHỈ'", "Thầy Lê Minh Khôi · 'CHINH PHỤC ĐỈNH CAO TRI THỨC'"], 0),
-      sa(["ha thanh liem", "hà thanh liêm", "thay ha thanh liem", "thầy hà thanh liêm"], "Ví dụ: Hà Thanh Liêm"),
+      sa(["ha thanh liem", "hà thanh liêm", "thay ha thanh liem", "thầy hà thanh liêm"], "Nhập họ và tên giáo viên (ví dụ: Nguyễn Văn A)"),
     ],
   ),
 
@@ -90,7 +105,7 @@ export const questions: Question[] = [
     [
       tf("PNIT tuyển thành viên xuyên suốt năm học thông qua hình thức làm form đăng ký trực tuyến.", true),
       mc(["Làm form đăng ký (apply form), tuyển xuyên suốt năm học", "Chỉ tuyển 1 đợt duy nhất vào đầu tháng 9 bằng thi viết", "Phải qua phỏng vấn trực tiếp tại phòng Đoàn trường", "Chỉ tuyển chọn học sinh đạt giải cấp thành phố"], 0),
-      sa(["lam form de apply", "làm form để apply", "lam form", "làm form", "dien form", "điền form", "xuyen suot nam hoc", "xuyên suốt năm học"], "Ví dụ: làm form để apply"),
+      sa(["lam form de apply", "làm form để apply", "lam form", "làm form", "dien form", "điền form", "xuyen suot nam hoc", "xuyên suốt năm học"], "Nhập phương thức đăng ký (ví dụ: qua biểu mẫu...)"),
     ],
   ),
 
@@ -102,7 +117,7 @@ export const questions: Question[] = [
     [
       tf("Học sinh chưa biết code hoàn toàn có thể tham gia và sẽ được PNIT đào tạo bài bản.", true),
       mc(["Được, CLB sẽ đào tạo bài bản từ số 0 (mang thân, laptop nếu có)", "Không, bắt buộc phải thành thạo ít nhất 2 ngôn ngữ lập trình", "Không, chỉ nhận học sinh có chứng chỉ tin học quốc tế", "Chỉ được tham gia nếu có máy tính xách tay cấu hình cao"], 0),
-      sa(["duoc se dao tao bai ban", "được sẽ đào tạo bài bản", "duoc", "được", "dao tao bai ban", "đào tạo bài bản"], "Ví dụ: được, sẽ đào tạo bài bản"),
+      sa(["duoc se dao tao bai ban", "được sẽ đào tạo bài bản", "duoc", "được", "dao tao bai ban", "đào tạo bài bản"], "Nhập câu trả lời ngắn (Được/Không và giải thích ngắn)"),
     ],
   ),
 
@@ -114,7 +129,7 @@ export const questions: Question[] = [
     [
       tf("PNIT không thu lệ phí bắt buộc, chỉ thu quỹ theo diện tự nguyện để chi trả chi phí tham gia event.", true),
       mc(["Không lệ phí, chỉ thu quỹ CLB tự nguyện để chi trả sự kiện", "Thu lệ phí thành viên cố định 150.000đ/tháng", "Bắt buộc đóng phí cơ sở vật chất phòng máy hàng kỳ", "Thu phí hồ sơ khi nộp form apply trực tuyến"], 0),
-      sa(["khong le phi", "không lệ phí", "khong co le phi", "không có lệ phí", "tu nguyen", "tự nguyện", "khong", "không"], "Ví dụ: không, chỉ thu quỹ tự nguyện"),
+      sa(["khong le phi", "không lệ phí", "khong co le phi", "không có lệ phí", "tu nguyen", "tự nguyện", "khong", "không"], "Nhập quy định về lệ phí (ví dụ: có/không thu phí...)"),
     ],
   ),
 
@@ -126,7 +141,7 @@ export const questions: Question[] = [
     [
       tf("Tuyệt đối không bao giờ cung cấp mật khẩu cá nhân hay mã OTP vào các biểu mẫu khảo sát trực tuyến.", true),
       mc(["Kiểm tra kỹ URL chính chủ, tuyệt đối không nhập mật khẩu hay mã OTP", "Bất kỳ biểu mẫu nào tạo qua Google Form đều tuyệt đối an toàn", "Nên điền mật khẩu tài khoản mạng xã hội để xác thực danh tính", "Tắt toàn bộ lớp bảo mật trình duyệt để tải form nhanh hơn"], 0),
-      sa(["kiem tra url khong nhap mat khau", "kiểm tra url không nhập mật khẩu", "khong nhap mat khau", "không nhập mật khẩu", "khong chia se mat khau va otp", "không chia sẻ mật khẩu và otp", "an toan so", "an toàn số"], "Ví dụ: kiểm tra URL, không nhập mật khẩu/OTP", [{ any: ["url", "ten mien", "tên miền"], points: 10 }, { any: ["mat khau", "mật khẩu", "otp"], points: 10 }]),
+      sa(["kiem tra url khong nhap mat khau", "kiểm tra url không nhập mật khẩu", "khong nhap mat khau", "không nhập mật khẩu", "khong chia se mat khau va otp", "không chia sẻ mật khẩu và otp", "an toan so", "an toàn số"], "Nhập nguyên tắc an toàn số (ví dụ: kiểm tra link, bảo mật thông tin...)", [{ any: ["url", "ten mien", "tên miền"], points: 10 }, { any: ["mat khau", "mật khẩu", "otp"], points: 10 }]),
     ],
   ),
 
@@ -141,7 +156,7 @@ export const questions: Question[] = [
     [
       tf("PNIT sinh hoạt định kỳ vào chiều Thứ 7, 3h30 - 5h chiều tại Phòng tin học 3.", true),
       mc(["Thứ 7, 15:30 - 17:00 tại Phòng tin học 3", "Chủ nhật, 8:00 - 10:00 tại Phòng máy 1", "Chiều Thứ 6, 17:00 - 18:30 tại Thư viện", "Sáng Thứ 2, 7:00 - 8:30 tại Hội trường lớn"], 0),
-      sa(["thu 7 phong tin hoc 3", "thứ 7 phòng tin học 3", "phong tin hoc 3", "phòng tin học 3", "thu 7 3h30 5h chieu", "thứ 7 3h30 5h chiều", "15:30 17:00"], "Ví dụ: Thứ 7, 15:30 - 17:00, Phòng tin học 3"),
+      sa(["thu 7 phong tin hoc 3", "thứ 7 phòng tin học 3", "phong tin hoc 3", "phòng tin học 3", "thu 7 3h30 5h chieu", "thứ 7 3h30 5h chiều", "15:30 17:00"], "Nhập thứ, giờ và phòng sinh hoạt (ví dụ: Thứ Hai, 8h00, Phòng A1)"),
     ],
   ),
 
@@ -153,7 +168,24 @@ export const questions: Question[] = [
     [
       tf("Ba giá trị cốt lõi của PNIT là: Sáng tạo - Vận dụng - Tự tin.", true),
       mc(["Sáng tạo - Vận dụng - Tự tin", "Kỷ luật - Tốc độ - Cạnh tranh", "Lý thuyết - Thành tích - Cá nhân", "Cần cù - Rập khuôn - An toàn"], 0),
-      sa(["sang tao van dung tu tin", "sáng tạo vận dụng tự tin", "sang tao", "sáng tạo", "van dung", "vận dụng", "tu tin", "tự tin"], "Ví dụ: Sáng tạo - Vận dụng - Tự tin"),
+      sa(
+        [
+          "sang tao van dung tu tin",
+          "sáng tạo vận dụng tự tin",
+          "sang tao",
+          "sáng tạo",
+          "van dung",
+          "vận dụng",
+          "tu tin",
+          "tự tin",
+        ],
+        "Nhập 3 giá trị cách nhau bằng dấu gạch ngang (ví dụ: Từ 1 - Từ 2 - Từ 3)",
+        [
+          { any: ["sang tao", "sáng tạo"], points: 7 },
+          { any: ["van dung", "vận dụng"], points: 7 },
+          { any: ["tu tin", "tự tin"], points: 6 },
+        ],
+      ),
     ],
   ),
 
@@ -165,7 +197,7 @@ export const questions: Question[] = [
     [
       tf("Dù số lượng khá ít (hơn 20 bạn), PNIT vẫn luôn vui vẻ và gặt hái nhiều giải thưởng lớn nhỏ.", true),
       mc(["Quân số hơn 20 người nhưng luôn vui vẻ và đoạt nhiều giải thưởng", "Có số lượng thành viên đông nhất trường với hơn 300 bạn", "Chỉ tập trung thi đấu thể thao điện tử mà không học code", "Là CLB duy nhất có phòng máy bay thử nghiệm riêng"], 0),
-      sa(["it nguoi nhung vui ve doat nhieu giai thuong", "vui ve va doat nhieu giai thuong", "vui ve", "vui vẻ", "doat nhieu giai thuong", "đoạt nhiều giải thưởng"], "Ví dụ: ít người nhưng vui vẻ, đoạt nhiều giải thưởng"),
+      sa(["it nguoi nhung vui ve doat nhieu giai thuong", "vui ve va doat nhieu giai thuong", "vui ve", "vui vẻ", "doat nhieu giai thuong", "đoạt nhiều giải thưởng"], "Nhập nét khác biệt nổi bật của CLB"),
     ],
   ),
 
@@ -177,7 +209,7 @@ export const questions: Question[] = [
     [
       tf("Làm việc nhóm công nghệ đòi hỏi phân định rõ vai trò, giao tiếp cởi mở và quản lý phiên bản chung.", true),
       mc(["Phân chia vai trò rõ ràng, giao tiếp chủ động và quản lý phiên bản tập trung", "Giao toàn bộ công việc cho một thành viên giỏi nhất gánh đội", "Mỗi người tự làm riêng rẽ theo ý mình mà không cần thống nhất", "Không cần họp nhóm hay cập nhật tiến độ với nhau"], 0),
-      sa(["phan chia vai tro ro rang giao tiep chu dong", "phan chia vai tro ro rang", "phân chia vai trò rõ ràng", "giao tiep chu dong", "giao tiếp chủ động", "lam viec nhom", "làm việc nhóm", "teamwork"], "Ví dụ: phân chia vai trò rõ ràng, giao tiếp chủ động"),
+      sa(["phan chia vai tro ro rang giao tiep chu dong", "phan chia vai tro ro rang", "phân chia vai trò rõ ràng", "giao tiep chu dong", "giao tiếp chủ động", "lam viec nhom", "làm việc nhóm", "teamwork"], "Nhập nguyên tắc làm việc nhóm cốt lõi"),
     ],
   ),
 
@@ -192,7 +224,7 @@ export const questions: Question[] = [
     [
       tf("Ý tưởng của Milu xuất phát từ việc bạn bè hay quên lịch trực nhật và hạn nộp bài.", true),
       mc(["Bạn bè hay quên lịch trực nhật, hạn nộp bài (áp dụng quy trình 5 bước)", "Trường học thiếu phòng tập thể dục cho học sinh", "Xe buýt trường học không có máy điều hòa không khí", "Học sinh không tìm được chỗ mua đồ ăn sáng"], 0),
-      sa(["quen lich va han nop bai", "quên lịch và hạn nộp bài"], "Ví dụ: quên lịch và hạn nộp bài", [{ any: ["lich", "lịch"], points: 10 }, { any: ["han nop bai", "hạn nộp bài"], points: 10 }]),
+      sa(["quen lich va han nop bai", "quên lịch và hạn nộp bài"], "Nhập vấn đề thực tế cần giải quyết", [{ any: ["lich", "lịch"], points: 10 }, { any: ["han nop bai", "hạn nộp bài"], points: 10 }]),
     ],
   ),
 
@@ -204,7 +236,7 @@ export const questions: Question[] = [
     [
       tf("Bản demo trang xem lịch và nhắc việc là phiên bản MVP tập trung giải quyết bài toán cốt lõi.", true),
       mc(["Trang xem lịch và nhắc việc (MVP tập trung giải pháp cốt lõi trước)", "Một mạng xã hội video ngắn hoàn chỉnh với hàng triệu người dùng", "Một trò chơi 3D thế giới mở chạy trên máy chủ đám mây", "Một hệ thống thanh toán điện tử ngân hàng tích hợp"], 0),
-      sa(["trang xem lich va nhac viec", "trang xem lịch và nhắc việc", "trang xem lich", "trang xem lịch", "mvp"], "Ví dụ: trang xem lịch và nhắc việc (MVP)"),
+      sa(["trang xem lich va nhac viec", "trang xem lịch và nhắc việc", "trang xem lich", "trang xem lịch", "mvp"], "Nhập tên hoặc loại sản phẩm của nhóm"),
     ],
   ),
 
@@ -216,7 +248,7 @@ export const questions: Question[] = [
     [
       tf("Kỹ thuật phân rã giúp chia bài toán lớn thành các hàm đơn giản, dễ bảo trì và kiểm thử.", true),
       mc(["Chia nhỏ bài toán thành các hàm/module độc lập, dễ kiểm thử và bảo trì", "Viết dồn toàn bộ mã nguồn vào một hàm duy nhất dài hàng nghìn dòng", "Hạn chế đặt tên biến có nghĩa để làm cho code khó đọc hơn", "Làm cho chương trình chạy mà không cần nạp vào bộ nhớ máy tính"], 0),
-      sa(["chia nho bai toan thanh cac ham", "chia nhỏ bài toán thành các hàm", "phan ra", "phân rã", "decomposition", "tach ham", "tách hàm", "modular", "mo dun", "mô đun"], "Ví dụ: chia nhỏ bài toán thành các hàm độc lập"),
+      sa(["chia nho bai toan thanh cac ham", "chia nhỏ bài toán thành các hàm", "phan ra", "phân rã", "decomposition", "tach ham", "tách hàm", "modular", "mo dun", "mô đun"], "Nhập tên kỹ thuật hoặc lợi ích lập trình"),
     ],
   ),
 
@@ -228,7 +260,7 @@ export const questions: Question[] = [
     [
       tf("Đọc kỹ stack trace và cô lập nguyên nhân gốc rễ là phương pháp gỡ lỗi khoa học hơn việc sửa mò ngẫu nhiên.", true),
       mc(["Đọc kỹ thông báo lỗi/stack trace, cô lập dữ liệu và kiểm tra logic từng bước", "Xóa toàn bộ dự án và gõ lại từ đầu mà không cần quan sát lỗi", "Sửa đổi bừa bãi các câu lệnh cho tới khi máy tính không kêu lỗi", "Khởi động lại máy tính liên tục và hy vọng code tự sửa"], 0),
-      sa(["doc thong bao loi va stack trace", "đọc thông báo lỗi và stack trace", "stack trace", "debugging", "go loi", "gỡ lỗi"], "Ví dụ: đọc thông báo lỗi và stack trace"),
+      sa(["doc thong bao loi va stack trace", "đọc thông báo lỗi và stack trace", "stack trace", "debugging", "go loi", "gỡ lỗi"], "Nhập phương pháp xử lý lỗi khoa học"),
     ],
   ),
 
@@ -243,7 +275,7 @@ export const questions: Question[] = [
     [
       tf("Machine Learning tự động rút ra quy luật từ dữ liệu mẫu thay vì phụ thuộc hoàn toàn vào các quy tắc lập trình thủ công.", true),
       mc(["Tự học quy luật từ dữ liệu mẫu để đưa ra suy luận và dự đoán", "Chỉ thực thi danh sách các lệnh if-else cố định do con người viết sẵn", "Chỉ là một thuật toán tìm kiếm từ khóa trong cơ sở dữ liệu có sẵn", "Hoạt động hoàn toàn ngẫu nhiên mà không dựa trên bất kỳ dữ liệu nào"], 0),
-      sa(["hoc quy luat tu du lieu", "học quy luật từ dữ liệu", "machine learning", "tu hoc tu du lieu", "tự học từ dữ liệu"], "Ví dụ: tự học quy luật từ dữ liệu mẫu"),
+      sa(["hoc quy luat tu du lieu", "học quy luật từ dữ liệu", "machine learning", "tu hoc tu du lieu", "tự học từ dữ liệu"], "Nhập nguyên lý vận hành của Machine Learning"),
     ],
   ),
 
@@ -255,7 +287,7 @@ export const questions: Question[] = [
     [
       tf("Hiện tượng ảo giác (hallucination) là khi mô hình AI tạo ra thông tin sai lệch một cách rất tự tin.", true),
       mc(["Hiện tượng AI bịa thông tin sai sự thật (cần kiểm chứng nguồn dữ liệu)", "Lỗi máy tính bị mất kết nối mạng Internet tạm thời", "Tấn công mã độc tống tiền (Ransomware) làm khóa dữ liệu", "Lỗi phần cứng màn hình máy tính bị nhấp nháy"], 0),
-      sa(["ao giac", "ảo giác", "hallucination", "kiem chung", "kiểm chứng"], "Ví dụ: ảo giác (hallucination), cần kiểm chứng"),
+      sa(["ao giac", "ảo giác", "hallucination", "kiem chung", "kiểm chứng"], "Nhập tên thuật ngữ hiện tượng (tiếng Việt hoặc tiếng Anh)"),
     ],
   ),
 
@@ -267,7 +299,22 @@ export const questions: Question[] = [
     [
       tf("PNIT có thành viên đạt giải Olympic Tin học, Toán (2025-2026) và 1 đôi vào dự tuyển KHKT cấp Quốc gia.", true),
       mc(["Olympic Tin/Toán (2025-2026), AI Challenge (2024-2025 & 2025-2026), dự tuyển KHKT Quốc gia", "Giải Vô địch Điền kinh và Bóng đá học sinh cấp Thành phố 2026", "Huy chương Vàng Tiếng Anh Hùng biện Toàn quốc 2025", "Giải Nhất Hội diễn Văn nghệ Hoa Phượng Đỏ 2024"], 0),
-      sa(["ai challenge olympic khkt", "ai challenge", "olympic", "khoa hoc ky thuat", "khoa học kỹ thuật", "khkt"], "Ví dụ: AI Challenge, Olympic, KHKT Quốc gia"),
+      sa(
+        [
+          "ai challenge olympic khkt",
+          "ai challenge",
+          "olympic",
+          "khoa hoc ky thuat",
+          "khoa học kỹ thuật",
+          "khkt",
+        ],
+        "Nhập tên các giải thưởng hoặc cuộc thi tiêu biểu",
+        [
+          { any: ["ai challenge"], points: 7 },
+          { any: ["olympic"], points: 7 },
+          { any: ["khoa hoc ky thuat", "khoa học kỹ thuật", "khkt"], points: 6 },
+        ],
+      ),
     ],
   ),
 
@@ -279,7 +326,14 @@ export const questions: Question[] = [
     [
       tf("PN Stem Innovations là workshop thường niên do PNIT tổ chức cho học sinh toàn trường.", true),
       mc(["PN Stem Innovations (thường niên) & Nghiên cứu KH, KHKT, Tin học trẻ, AI Challenge", "PN Hackathon Mùa Hè & Giải Đua xe Robot Quốc tế", "PN Tech Conference & Cuộc thi Sáng tác Truyện tranh AI", "Hội chợ Triển lãm Máy tính & Ngày hội Việc làm Công nghệ"], 0),
-      sa(["pn stem innovations", "stem innovations", "pn stem", "tin hoc tre", "ai challenge"], "Ví dụ: PN Stem Innovations"),
+      sa(
+        ["pn stem innovations", "stem innovations", "pn stem"],
+        "Nhập tên sự kiện thường niên do CLB tổ chức",
+        [
+          { any: ["pn stem innovations", "stem innovations", "pn stem"], points: 10 },
+          { any: ["tin hoc tre", "ai challenge", "khoa hoc ky thuat", "nghien cuu khoa hoc"], points: 10 },
+        ],
+      ),
     ],
   ),
 ];
