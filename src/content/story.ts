@@ -1,92 +1,198 @@
 import type { StoryStage } from "@/lib/types";
 
-// Nội dung mặc định; admin có thể thay toàn bộ trong /admin/content.
 export const stages: StoryStage[] = [
   {
-    id: "bus",
-    title: "Chuyến xe và một cái tên lạ",
-    scene: "bus",
-    background: "/story/bus-inside-2.jpg",
-    lines: [
-      { speaker: "Người kể chuyện", text: "Milu vừa vào lớp 10 THPT Phú Nhuận. Cậu luôn tò mò về công nghệ nhưng chưa biết câu lạc bộ nào phù hợp." },
-      { speaker: "Người kể chuyện", text: "Trên chuyến xe buýt đến trường, Milu nghe hai bạn phía trước sôi nổi bàn về một buổi sinh hoạt sắp tới." },
-      { speaker: "Bạn cùng trường", text: "Thứ 7 này PNIT sinh hoạt ở Phòng tin học 3 đó! Thầy Hà Thanh Liêm và các anh chị hướng dẫn tận tình lắm." },
-      { speaker: "Milu", text: "PNIT là gì vậy bạn? Viết tắt của tên nào thế?" },
-      { speaker: "Bạn cùng trường", text: "Phu Nhuan's Information Technology Club — thành lập từ năm 2015 với slogan: 'BỨT PHÁ TỎA SÁNG, KÍCH HOẠT KỶ NGUYÊN MỚI!'." },
-      { speaker: "Người kể chuyện", text: "Dù cụm viết tắt hơi lạ về ngữ pháp, ngọn lửa nhiệt huyết của cái tên PNIT khiến Milu thấy vô cùng tò mò." },
-    ],
+    "id": "bus",
+    "title": "Chuyến xe và một cái tên lạ",
+    "scene": "bus",
+    "background": "/story/bus-inside-2.jpg",
+    "lines": [
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Milu vừa vào lớp 10 THPT Phú Nhuận. Cậu thích mày mò máy tính, nhưng vẫn ngại bước vào một câu lạc bộ mới."
+      },
+      {
+        "speaker": "Bạn cùng trường",
+        "text": "Thứ Bảy này ghé PNIT với tụi mình không? CLB Tin học đó, có từ năm 2015 rồi."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Tớ chưa biết code. Vào đó chắc ngồi nhìn mọi người làm mất?"
+      },
+      {
+        "speaker": "Bạn cùng trường",
+        "text": "Tớ cũng từng nghĩ vậy. Tên tiếng Anh của CLB là Phu Nhuan's Information Technology Club; mọi người gọi PNIT cho gọn. Thầy Hà Thanh Liêm phụ trách, còn các anh chị sẽ hướng dẫn mình."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Vậy để tớ tìm hiểu thử. Biết đâu có thứ mình làm được."
+      }
+    ]
   },
   {
-    id: "yard",
-    title: "Mã QR trước cổng trường",
-    scene: "yard",
-    background: "/story/school-front-door.jpg",
-    portrait: "/story/milu-idle.png",
-    lines: [
-      { speaker: "Người kể chuyện", text: "Tan học, ngang qua bảng tin trước cổng trường, Milu nhìn thấy poster tuyển thành viên có in logo chính thức của PNIT." },
-      { speaker: "Người kể chuyện", text: "Poster có mã QR với thông báo: Tuyển thành viên khối 10, 11, 12 xuyên suốt năm học qua form apply. Không thu lệ phí!", image: "/story/recruitment-letter.jpg" },
-      { speaker: "Milu", text: "Mình chưa từng biết code, cũng chưa có laptop, liệu có đăng ký được không nhỉ?" },
-      { speaker: "Thành viên PNIT", text: "Được chứ em! Chỉ cần mang thân đến, CLB đào tạo bài bản từ số 0. Quỹ CLB chỉ thu tự nguyện khi tham gia sự kiện thôi." },
-      { speaker: "Thành viên PNIT", text: "Nhớ quét mã QR kiểm tra đúng URL form chính chủ, luôn giữ an toàn số và không bao giờ nhập mật khẩu/OTP nha." },
-      { speaker: "Người kể chuyện", text: "Milu hít một hơi, giơ điện thoại quét mã điền form apply, háo hức chờ đón buổi gặp đầu tiên." },
-    ],
+    "id": "yard",
+    "title": "Mã QR trước cổng trường",
+    "scene": "yard",
+    "background": "/story/school-front-door.jpg",
+    "portrait": "/story/milu-idle.png",
+    "lines": [
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Tan học, Milu thấy poster PNIT trên bảng tin: tuyển học sinh khối 10, 11, 12 xuyên suốt năm học qua form apply."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Không có laptop thì có tham gia được không chị?"
+      },
+      {
+        "speaker": "Thành viên PNIT",
+        "text": "Được em. Laptop mang theo nếu có, người mới được đào tạo từ đầu. Không có lệ phí gia nhập; quỹ hỗ trợ sự kiện là tự nguyện."
+      },
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Milu quét QR. Một trang lạ yêu cầu cả mật khẩu Facebook khiến cậu chần chừ.",
+        "image": "/story/recruitment-letter.jpg"
+      },
+      {
+        "speaker": "Thành viên PNIT",
+        "text": "Khoan nhập nhé! Mình kiểm tra địa chỉ qua fanpage chính thức trước. Form đăng ký không cần mật khẩu hay OTP của em."
+      },
+      {
+        "speaker": "Milu",
+        "text": "May mà em hỏi. Để em mở đúng form rồi mới điền."
+      }
+    ]
   },
   {
-    id: "thought",
-    title: "Buổi sinh hoạt Phòng tin học 3",
-    scene: "thought",
-    portrait: "/story/milu-questioning.png",
-    lines: [
-      { speaker: "Người kể chuyện", text: "Chiều Thứ 7 đúng 15h30, Milu bước vào Phòng tin học 3. Căn phòng rộn rã tiếng cười và sự thân thiện." },
-      { speaker: "Người kể chuyện", text: "Các bạn đang say sưa trao đổi về lập trình, robotics, media và thử nghiệm mô hình AI cho các giải đấu lớn." },
-      { speaker: "Milu", text: "CLB mình hơn 20 bạn mà ai cũng gắn kết và đạt nhiều giải thưởng lớn ghê!" },
-      { speaker: "Chủ nhiệm CLB", text: "Đó là vì PNIT hoạt động trên ba giá trị cốt lõi: Sáng tạo - Vận dụng - Tự tin. Dù ít người nhưng như một gia đình." },
-      { speaker: "Thành viên nhóm", text: "Trong làm việc nhóm công nghệ, tụi mình luôn phân định vai trò rõ ràng, giao tiếp chủ động và quản lý phiên bản cùng nhau." },
-      { speaker: "Người kể chuyện", text: "Cảm giác ấm áp, hòa đồng và được thuộc về nơi này khiến Milu hoàn toàn tan biến sự bỡ ngỡ ban đầu." },
-    ],
+    "id": "thought",
+    "title": "Buổi gặp đầu tiên",
+    "scene": "lab",
+    "background": "/story/computer-room.jpg",
+    "portrait": "/story/milu-questioning.png",
+    "lines": [
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Thứ Bảy, 15:30, Milu đến Phòng tin học 3. Buổi sinh hoạt kết thúc lúc 17:00. Vừa ngồi xuống, cậu đã được kéo ghế mời vào nhóm."
+      },
+      {
+        "speaker": "Chị trưởng CLB",
+        "text": "Ở đây tụi mình cùng thử lập trình, thiết kế, robotics, media. Sáng tạo – Vận dụng – Tự tin là ba giá trị của PNIT."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Nhưng nếu em làm sai thì sao?"
+      },
+      {
+        "speaker": "Bạn cùng nhóm",
+        "text": "Thì mình cùng sửa! Có lỗi cứ báo rõ lúc nào nó xảy ra và góp ý vào việc cần sửa. Đừng đợi sát ngày trình bày."
+      },
+      {
+        "speaker": "Chị trưởng CLB",
+        "text": "Nhóm cũng cần chia người phụ trách và báo tiến độ. Khi cùng viết code, mình lưu thay đổi bằng Git để tránh ghi đè công việc của nhau."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Vậy em muốn thử một trang giúp lớp nhớ lịch trực nhật và hạn nộp bài. Tuần rồi em quên mất một bài tập..."
+      }
+    ]
   },
   {
-    id: "lab",
-    title: "Kế hoạch dự án & Bản demo",
-    scene: "lab",
-    background: "/story/computer-room.jpg",
-    portrait: "/story/milu-idle.png",
-    lines: [
-      { speaker: "Người kể chuyện", text: "Milu cùng nhóm thảo luận ý tưởng: làm một trang web nhỏ xem lịch và nhắc việc để hỗ trợ bạn bè trong trường." },
-      { speaker: "Chủ nhiệm CLB", text: "Ý tưởng hay! Hãy áp dụng quy trình 5 bước: Xác định vấn đề -> Đặt mục tiêu -> Chọn MVP -> Phân chia việc -> Kiểm tra khả thi." },
-      { speaker: "Milu", text: "Em hiểu rồi, tụi mình sẽ làm MVP giải quyết vấn đề cốt lõi là nhắc lịch trực nhật và hạn nộp bài trước." },
-      { speaker: "Thành viên nhóm", text: "Khi lập trình, nhớ áp dụng kỹ thuật phân rã chia bài toán thành các hàm độc lập để dễ gỡ lỗi (debugging) nhé." },
-      { speaker: "Người kể chuyện", text: "Cả nhóm cùng nhau phác thảo giao diện, chia nhỏ công việc và bắt tay vào hiện thực hóa ý tưởng." },
-    ],
+    "id": "lab",
+    "title": "Ý tưởng nhỏ, kế hoạch rõ",
+    "scene": "lab",
+    "background": "/story/computer-room.jpg",
+    "portrait": "/story/milu-idle.png",
+    "lines": [
+      {
+        "speaker": "Milu",
+        "text": "Một trang có lịch, chat, điểm số, thông báo... liệu một tuần làm xong không nhỉ?"
+      },
+      {
+        "speaker": "Bạn cùng nhóm",
+        "text": "Hay mình chỉ làm trang xem lịch và nhắc việc cho vài bạn thử trước? Đó là MVP: bản nhỏ đủ giải quyết nhu cầu chính để lấy phản hồi."
+      },
+      {
+        "speaker": "Chị trưởng CLB",
+        "text": "Nhóm mình dùng khung 5 bước: xác định vấn đề, đặt mục tiêu, chọn bản đầu tiên, chia việc, kiểm tra khả thi. Đây là một cách thực hành, không phải quy trình duy nhất."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Em lo phần chat quá sức. Mình để sau, dành thời gian cho lịch trực nhật và hạn nộp bài nhé."
+      },
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Lúc thử bản đầu, nút lưu bị lỗi khi để ngày trống. Milu định đổi hàng loạt dòng code, nhưng bạn cùng nhóm ngăn lại."
+      },
+      {
+        "speaker": "Bạn cùng nhóm",
+        "text": "Thử lại với ngày trống, đọc thông báo tìm nguyên nhân rồi sửa từng chỗ. Sau đó thử cả ngày trống lẫn ngày hợp lệ. Tách phần kiểm tra ngày thành hàm nhỏ sẽ dễ thử hơn."
+      }
+    ]
   },
   {
-    id: "home",
-    title: "Code, AI và Tinh thần đồng đội",
-    scene: "home",
-    background: "/story/bus-outside-green.png",
-    portrait: "/story/milu-idle.png",
-    lines: [
-      { speaker: "Người kể chuyện", text: "Tối hôm đó bên bàn học, Milu bắt đầu gõ những dòng code đầu tiên cho bản demo lịch và nhắc việc." },
-      { speaker: "Milu", text: "Mình thử nghiệm tính năng AI hỗ trợ phân loại lời nhắc, nhưng cần lưu ý gì nhỉ?" },
-      { speaker: "Bạn cùng nhóm", text: "Cần cẩn thận hiện tượng ảo giác (hallucination) của AI và luôn đảm bảo an toàn thông tin cá nhân của người dùng nhé!" },
-      { speaker: "Người kể chuyện", text: "Milu kiên trì đọc thông báo lỗi, sửa từng hàm. Cuối cùng, bản demo chạy thành công trên trình duyệt!" },
-      { speaker: "Chủ nhiệm CLB", text: "Làm tốt lắm! Đây sẽ là bước đệm để tụi mình hướng tới sự kiện PN Stem Innovations và các kỳ thi lớn sắp tới!" },
-      { speaker: "Người kể chuyện", text: "Milu mỉm cười tự hào. Một dòng code nhỏ hôm nay đã mở ra cả một chân trời sáng tạo cùng PNIT." },
-    ],
-  },
+    "id": "home",
+    "title": "Bản demo đầu tiên",
+    "scene": "home",
+    "portrait": "/story/milu-idle.png",
+    "lines": [
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Tối đó, nút lưu đã hoạt động. Milu nghĩ đến chuyện dùng AI phân loại lời nhắc để thử trong một phiên bản sau."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Mình phải đưa gì cho AI học nhỉ?"
+      },
+      {
+        "speaker": "Bạn cùng nhóm",
+        "text": "Với bài phân loại này, chuẩn bị lời nhắc mẫu có nhãn như bài tập hay trực nhật. Mô hình học quy luật từ dữ liệu đó. Bản demo cứ dùng dữ liệu giả, đừng đưa thông tin riêng của các bạn vào."
+      },
+      {
+        "speaker": "Milu",
+        "text": "Em hỏi AI thử thì nó tự thêm một hạn nộp bài chẳng có trong thông báo lớp!"
+      },
+      {
+        "speaker": "Bạn cùng nhóm",
+        "text": "Đó là thông tin AI tạo sai, dù nghe rất chắc chắn. Ngày giờ phải đối chiếu thông báo gốc hoặc hỏi giáo viên trước khi dùng."
+      },
+      {
+        "speaker": "Người kể chuyện",
+        "text": "Milu bỏ ngày bịa ra, giữ bản lịch đơn giản và gửi demo cho nhóm. Lần này cậu không còn ngại xin góp ý."
+      }
+    ]
+  }
 ];
 
 export const endingStage: StoryStage = {
-  id: "ending",
-  title: "Kết thúc: Nơi bắt đầu kỷ nguyên mới",
-  scene: "yard",
-  background: "/story/school-front-door.jpg",
-  portrait: "/story/milu-idle.png",
-  lines: [
-    { speaker: "Người kể chuyện", text: "Trong buổi sinh hoạt tiếp theo tại Phòng tin học 3, Milu tự tin trình bày bản demo trước toàn thể CLB." },
-    { speaker: "Thầy Hà Thanh Liêm", text: "Thầy rất mừng khi thấy các em biết vận dụng kiến thức công nghệ để giải quyết bài toán thực tế của học sinh trường mình." },
-    { speaker: "Thành viên PNIT", text: "Từ Olympic Tin học, Toán đến AI Challenge hay KHKT Quốc gia, mọi thành tích của PNIT đều bắt đầu từ những dự án nhỏ như thế này." },
-    { speaker: "Milu", text: "Cảm ơn thầy và các anh chị! Ở PNIT, em không chỉ học được Code và AI, mà còn tìm thấy một gia đình để cùng bứt phá." },
-    { speaker: "Người kể chuyện", text: "BỨT PHÁ TỎA SÁNG, KÍCH HOẠT KỶ NGUYÊN MỚI! — PNIT luôn sẵn sàng chào đón bạn!" },
-  ],
+  "id": "ending",
+  "title": "Một nơi để bắt đầu",
+  "scene": "lab",
+  "background": "/story/computer-room.jpg",
+  "portrait": "/story/milu-idle.png",
+  "lines": [
+    {
+      "speaker": "Người kể chuyện",
+      "text": "Buổi sinh hoạt sau, Milu mở demo. Một bạn thử thêm lịch, một bạn góp ý cách hiển thị ngày. Cuốn sổ của cậu lại có thêm việc cần làm."
+    },
+    {
+      "speaker": "Milu",
+      "text": "Nó vẫn còn nhỏ quá, liệu đem giới thiệu được không chị?"
+    },
+    {
+      "speaker": "Chị trưởng CLB",
+      "text": "Được chứ. Mình có PN Stem Innovations hằng năm cho học sinh cùng trải nghiệm. Các cuộc thi như AI Challenge, Tin học trẻ hay KHKT là những hướng để thử sức tiếp."
+    },
+    {
+      "speaker": "Người kể chuyện",
+      "text": "Milu nhớ những thành tích của các anh chị: Olympic Tin học, Toán; các đội đạt giải AI Challenge; một đôi vào vòng dự tuyển KHKT cấp Quốc gia. Cậu muốn nghe thêm cách họ bắt đầu."
+    },
+    {
+      "speaker": "Milu",
+      "text": "Trước em nghĩ phải giỏi mới vào được PNIT. Giờ em có một nhóm để hỏi khi bí và cùng làm tiếp."
+    },
+    {
+      "speaker": "Người kể chuyện",
+      "text": "BỨT PHÁ TỎA SÁNG, KÍCH HOẠT KỶ NGUYÊN MỚI! Hành trình của Milu mới bắt đầu. Còn bạn, muốn thử điều gì cùng PNIT?"
+    }
+  ]
 };

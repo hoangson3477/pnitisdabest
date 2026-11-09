@@ -22,7 +22,7 @@ export const club: ClubContent = {
     {
       title: "Nhỏ gọn nhưng đoạt giải lớn",
       description:
-        "Dù chỉ hơn 20 thành viên nhưng luôn tràn ngập tiếng cười, gắn kết và liên tục gặt hái giải thưởng lớn tại AI Challenge, Olympic THPT, KHKT cấp Quốc gia.",
+        "Hơn 20 thành viên cùng học và thử sức: đạt giải AI Challenge, Olympic THPT; một đôi vào vòng dự tuyển Khoa học kỹ thuật cấp Quốc gia.",
     },
     {
       title: "Sáng tạo - Vận dụng - Tự tin",
@@ -72,5 +72,5 @@ export const club: ClubContent = {
         "Thực hành quy trình 5 bước lập kế hoạch dự án (Xác định vấn đề -> Đặt mục tiêu -> Chọn MVP -> Phân chia việc -> Kiểm tra khả thi). Lập trình phân rã hàm modular và gỡ lỗi debugging khoa học. Hiểu bản chất Machine Learning, phòng ngừa ảo giác (Hallucination) của AI, an toàn số và tinh thần làm việc nhóm cởi mở.",
     },
   ],
-  playNote: "5 chặng · 20 câu hỏi (30% dễ / 70% khó) · khoảng 7–10 phút",
+  playNote: "5 chặng · 20 câu hỏi · khoảng 7–10 phút",
 };

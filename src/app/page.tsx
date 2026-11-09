@@ -219,6 +219,9 @@ export default async function Home() {
           <Link href="/play" className="btn-primary text-lg">
             Chơi ngay
           </Link>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfDNfWmYWHJ2uEBlFG0iPUHCN1DNRO6qBxttccCexERyUxw/viewform" target="_blank" rel="noreferrer" className="btn-secondary">
+            Đăng ký tham gia PNIT
+          </a>
         </section>
       </main>
 

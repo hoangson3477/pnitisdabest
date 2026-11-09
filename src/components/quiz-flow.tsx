@@ -1052,6 +1052,9 @@ export default function QuizFlow({
             <Link href="/leaderboard" className="btn-primary mt-5 w-full text-lg">
               Xem bảng xếp hạng
             </Link>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfDNfWmYWHJ2uEBlFG0iPUHCN1DNRO6qBxttccCexERyUxw/viewform" target="_blank" rel="noreferrer" className="btn-secondary mt-3 w-full">
+              Đăng ký tham gia PNIT
+            </a>
             <Link href="/" className="btn-secondary mt-3 w-full">
               Về trang chủ
             </Link>

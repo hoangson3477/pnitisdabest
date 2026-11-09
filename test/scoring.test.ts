@@ -60,7 +60,7 @@ describe("chấm điểm", () => {
   });
 
   it("chấp nhận đáp án tự luận có dấu, hoa/thường và khoảng trắng khác", () => {
-    expect(short("pnit-identity", "  CÂU LẠC BỘ   TIN HỌC ")).toMatchObject({
+    expect(short("pnit-identity", "  Phu Nhuan's Information Technology Club ")).toMatchObject({
       verdict: "correct",
       points: 20,
     });
@@ -78,7 +78,7 @@ describe("chấm điểm", () => {
       verdict: "partial",
       points: 10,
     });
-    expect(short("school-problem", "lịch và hạn nộp bài")).toMatchObject({ verdict: "partial", points: 20 });
+    expect(short("school-problem", "lịch và hạn nộp bài")).toMatchObject({ verdict: "correct", points: 20 });
   });
 
   it("trả 0 điểm khi sai", () => {
@@ -90,6 +90,18 @@ describe("chấm điểm", () => {
 });
 
 describe("dữ liệu câu hỏi", () => {
+  it("phân bố đáp án và không cho đủ điểm khi chỉ nhắc lại thuật ngữ", () => {
+    const choices = questions.map(q => q.variants.find(v => v.type === "choice")!);
+    for (let index = 0; index < 4; index++) {
+      expect(choices.filter(v => v.answerIndex === index)).toHaveLength(5);
+    }
+    expect(questions.filter(q => q.variants.some(v => v.type === "true_false" && v.answer))).toHaveLength(10);
+    for (const [id, value] of [["programming-debugging", "debugging"], ["ai-machine-learning", "machine learning"], ["ai-hallucination-safety", "ảo giác"], ["pnit-identity", "câu lạc bộ tin học"]]) {
+      expect(short(id, value).points).toBe(0);
+    }
+    expect(short("pnit-core-values", "sáng tạo")).toMatchObject({ verdict: "partial", points: 7 });
+  });
+
   it("có 20 câu, mỗi câu đủ 3 hình thức và tổng điểm tối đa 400", () => {
     expect(questions).toHaveLength(20);
     expect(new Set(questions.map((item) => item.id)).size).toBe(20);

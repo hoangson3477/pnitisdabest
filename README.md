@@ -90,7 +90,7 @@ Có hai cách:
 
 Lưu ý:
 
-- Nội dung mẫu là hư cấu — thay bằng thông tin thật trước khi dùng.
+- Nội dung mặc định dùng thông tin PNIT đã xác nhận, cập nhật tháng 11/2026.
 - **Chỉ được xuất bản khi chưa có lượt chơi.** Server và trigger database đều
   chặn thao tác này. Muốn đổi nội dung sau khi đã có người chơi, vào `/admin`
   reset dữ liệu trước.
@@ -172,6 +172,23 @@ Không chia sẻ URL `/admin` hoặc mật khẩu cho người chơi.
   thiết bị đó (hoặc reset toàn bộ) rồi người chơi tải lại trang.
 
 ## Scripts
+
+Build và phát triển dùng Webpack cùng PostCSS chính thức của Tailwind để tránh
+lỗi tiến trình xử lý CSS của Turbopack trên môi trường Windows hiện tại.
+
+Đồng bộ nội dung từ code lên Supabase (Node.js 22+; đọc `.env.local`):
+
+```bash
+npm run content:sync              # chỉ lưu bản nháp
+npm run content:sync -- --publish # xuất bản nếu chưa có lượt chơi
+npm run content:sync -- --check   # chỉ đọc, so sánh bản công khai với local
+```
+
+Script sao lưu bản nháp trước khi lưu vào `.tmp-content-backups/` (không đưa
+lên Git), dùng revision để tránh ghi đè chỉnh sửa đồng thời. Nếu đã có lượt
+chơi, chỉ lưu nháp và giữ nguyên bản công khai. Script không xóa lượt chơi và
+không ghi đè lịch sử xuất bản; chỉ reset trong admin khi đã được người phụ
+trách chấp thuận. Bản sao lưu có dữ liệu người chơi cần được giữ riêng tư.
 
 ```bash
 npm run dev        # phát triển

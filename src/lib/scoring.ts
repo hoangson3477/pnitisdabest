@@ -108,14 +108,14 @@ export function scoreAnswer(
     (variant.keywords ?? []).reduce((total, group) => {
       const matched = group.any.some((keyword) => {
         const needle = loose(keyword);
-        return needle.length > 0 && inputLoose.includes(needle);
+        return needle.length > 0 && ` ${inputLoose} `.includes(` ${needle} `);
       });
       return total + (matched ? group.points : 0);
     }, 0),
   );
 
   return {
-    verdict: partial > 0 ? "partial" : "wrong",
+    verdict: partial === variant.points ? "correct" : partial > 0 ? "partial" : "wrong",
     points: partial,
     correctAnswer: variant.accepted[0],
     explanation: question.explanation,

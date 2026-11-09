@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "content:sync": "node script/sync-supabase.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
@@ -18,7 +19,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
+    "@tailwindcss/postcss": "^4.3.4",
     "@types/node": "^24.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
