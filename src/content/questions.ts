@@ -230,15 +230,15 @@ export const questions: Question[] = [
     "Nêu cách giảm lộ thông tin cá nhân.",
   ),
   q(
-    "annual-event-contests",
-    "Nhóm muốn giới thiệu bản demo tại sự kiện thường niên do PNIT tổ chức. Đó là sự kiện nào?",
-    "PN Stem Innovations là sự kiện thường niên của PNIT dành cho học sinh. AI Challenge, Tin học trẻ và KHKT là các sân chơi CLB tham gia.",
-    "PN Stem Innovations là cuộc thi cấp Quốc gia do PNIT tổ chức.",
+    "demo-user-feedback",
+    "Sau khi bản demo chạy được, nhóm nên làm gì trước khi mở rộng tính năng?",
+    "Cho người dùng thử bản demo và thu thập phản hồi giúp nhóm kiểm tra xem sản phẩm có giải quyết đúng nhu cầu thực tế hay không.",
+    "Bản demo chạy được đồng nghĩa không cần cho người dùng thử nữa.",
     false,
-    ["PN Stem Innovations","Tin học trẻ","AI Challenge","Khoa học kỹ thuật"],
+    ["Cho người dùng thử và thu thập phản hồi","Thêm mọi tính năng nhóm nghĩ ra","Chỉ sửa màu giao diện","Chờ đến cuộc thi mới cho người khác dùng"],
     0,
-    ["PN Stem Innovations","Stem Innovations"],
-    "Nhập tên sự kiện thường niên.",
+    ["cho người dùng thử và thu thập phản hồi","dùng thử và lấy phản hồi","cho dùng thử và nhận góp ý"],
+    "Nêu cách kiểm tra sản phẩm với người dùng.",
   ),
 ];
 

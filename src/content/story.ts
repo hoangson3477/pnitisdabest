@@ -180,7 +180,7 @@ export const endingStage: StoryStage = {
     },
     {
       "speaker": "Chị trưởng CLB",
-      "text": "Được chứ. Mình có PN Stem Innovations hằng năm cho học sinh cùng trải nghiệm. Các cuộc thi như AI Challenge, Tin học trẻ hay KHKT là những hướng để thử sức tiếp."
+      "text": "Được chứ. Trước hết mình cho các bạn dùng thử và góp ý. Các cuộc thi như AI Challenge, Tin học trẻ hay KHKT là những hướng để thử sức tiếp."
     },
     {
       "speaker": "Người kể chuyện",

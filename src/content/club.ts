@@ -11,7 +11,6 @@ export const club: ClubContent = {
   stats: [
     { value: "20+", label: "thành viên (11/2026)" },
     { value: "11", label: "năm hoạt động" },
-    { value: "1", label: "sự kiện thường niên" },
   ],
   strengths: [
     {
@@ -32,10 +31,10 @@ export const club: ClubContent = {
   ],
   activities: [
     {
-      title: "PN Stem Innovations",
-      time: "Workshop thường niên",
+      title: "Học và thử nghiệm cùng nhau",
+      time: "Trong các buổi sinh hoạt",
       description:
-        "Sự kiện STEM/STEAM thường niên quy mô toàn trường do PNIT tổ chức, khơi nguồn sáng tạo công nghệ cho toàn thể học sinh Phú Nhuận.",
+        "Cùng tìm hiểu lập trình, AI, thiết kế và robotics; chia sẻ ý tưởng, làm thử sản phẩm và nhận góp ý từ các thành viên.",
     },
     {
       title: "Đấu trường Công nghệ & AI",
@@ -62,9 +61,9 @@ export const club: ClubContent = {
         "Sinh hoạt Thứ 7 (15:30 - 17:00) tại Phòng tin học 3 (mang thân, laptop nếu có). Không thu lệ phí gia nhập, quỹ CLB chỉ thu tự nguyện chi trả sự kiện. Ba giá trị cốt lõi: Sáng tạo - Vận dụng - Tự tin. Môi trường hơn 20 thành viên luôn gắn kết, thân thiện, đem lại cảm giác được thuộc về nơi này.",
     },
     {
-      title: "Bảng vàng thành tích & Sự kiện thường niên",
+      title: "Thành tích của các thành viên",
       body:
-        "PNIT tổ chức sự kiện thường niên PN Stem Innovations cho toàn học sinh. Thành tích nổi bật: giải Olympic THPT môn Tin học và Toán (2025 - 2026), 3 nhóm đạt giải AI Challenge (2025 - 2026), 1 đôi vào vòng dự tuyển KHKT cấp Quốc gia, và 4 đội đạt giải AI Challenge (2024 - 2025).",
+        "Thành tích nổi bật: giải Olympic THPT môn Tin học và Toán (2025 - 2026), 3 nhóm đạt giải AI Challenge (2025 - 2026), 1 đôi vào vòng dự tuyển KHKT cấp Quốc gia, và 4 đội đạt giải AI Challenge (2024 - 2025).",
     },
     {
       title: "Kỹ năng thực chiến: Kế hoạch, Code, AI, An toàn số & Nhóm",
